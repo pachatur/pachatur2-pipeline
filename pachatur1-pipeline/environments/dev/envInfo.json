@@ -1,0 +1,18 @@
+{
+    "name": "dev",
+    "propertyName": "dev.pachatur1-pipeline",
+    "groupId": 131645,
+    "isSecure": false,
+    "propertyId": 526932,
+    "latestVersionInfo": {
+        "propertyVersion": 1,
+        "updatedByUser": "rnfea5c5lhagynen",
+        "updatedDate": "2019-03-12T03:54:56Z",
+        "productionStatus": "INACTIVE",
+        "stagingStatus": "INACTIVE",
+        "etag": "3575fa731f37c012066832961ae2d14fe024a785",
+        "productId": "prd_SPM",
+        "ruleFormat": "v2018-09-12"
+    },
+    "suggestedRuleFormat": "v2018-09-12"
+}

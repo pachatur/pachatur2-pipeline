@@ -1,0 +1,75 @@
+{
+    "name": "Images",
+    "children": [],
+    "behaviors": [
+        {
+            "name": "origin",
+            "options": {
+                "originType": "CUSTOMER",
+                "hostname": "${env.originHostname}",
+                "forwardHostHeader": "ORIGIN_HOSTNAME",
+                "cacheKeyHostname": "REQUEST_HOST_HEADER",
+                "compress": true,
+                "enableTrueClientIp": false,
+                "originCertificate": "",
+                "verificationMode": "CUSTOM",
+                "ports": "",
+                "httpPort": 80,
+                "httpsPort": 443,
+                "originSni": true,
+                "customValidCnValues": [
+                    "{{Origin Hostname}}",
+                    "{{Forward Host Header}}"
+                ],
+                "originCertsToHonor": "STANDARD_CERTIFICATE_AUTHORITIES",
+                "standardCertificateAuthorities": [
+                    "akamai-permissive",
+                    "THIRD_PARTY_AMAZON"
+                ]
+            }
+        },
+        {
+            "name": "cacheError",
+            "options": {
+                "enabled": true,
+                "ttl": "1s",
+                "preserveStale": true
+            }
+        },
+        {
+            "name": "caching",
+            "options": {
+                "behavior": "MAX_AGE",
+                "mustRevalidate": false,
+                "ttl": "30s"
+            }
+        },
+        {
+            "name": "cacheKeyQueryParams",
+            "options": {
+                "behavior": "IGNORE_ALL"
+            }
+        },
+        {
+            "name": "rewriteUrl",
+            "options": {
+                "behavior": "PREPEND",
+                "keepQueryString": false,
+                "targetPathPrepend": "/akamaidev-world-tour/"
+            }
+        }
+    ],
+    "criteria": [
+        {
+            "name": "path",
+            "options": {
+                "matchOperator": "MATCHES_ONE_OF",
+                "values": [
+                    "/img/*"
+                ],
+                "matchCaseSensitive": false
+            }
+        }
+    ],
+    "criteriaMustSatisfy": "all"
+}
