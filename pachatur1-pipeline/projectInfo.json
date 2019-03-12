@@ -1,0 +1,17 @@
+{
+    "productId": "prd_SPM",
+    "contractId": "ctr_P-2MU96M3",
+    "groupIds": [
+        131645
+    ],
+    "environments": [
+        "dev",
+        "prod"
+    ],
+    "version": "0.3.6",
+    "isSecure": false,
+    "edgeGridConfig": {
+        "section": "papi"
+    },
+    "name": "pachatur1-pipeline"
+}
