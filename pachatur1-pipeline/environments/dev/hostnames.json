@@ -1,8 +1,0 @@
-[
-    {
-        "cnameFrom": "dev.pachatur1-pipeline",
-        "cnameTo": "dev.pachatur1-pipeline.edgesuite.net",
-        "cnameType": "EDGE_HOSTNAME",
-        "edgeHostnameId": null
-    }
-]
